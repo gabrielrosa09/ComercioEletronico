@@ -79,7 +79,7 @@ WSGI_APPLICATION = "setup.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.oracle",
-        "NAME": "ComercioEletronico",
+        "NAME": "xe",
         "USER": "system",
         "PASSWORD": "123456",
         'HOST': 'localhost',
