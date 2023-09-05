@@ -5,14 +5,12 @@ class User(models.Model):
     username = models.CharField(max_length=255)
     email = models.EmailField()
     password = models.CharField(max_length=255)
-    # Outros campos de perfil, como nome, endereço, número de telefone, etc.
 
 class Merchant(models.Model):
     merchant_id = models.AutoField(primary_key=True)
     merchant_name = models.CharField(max_length=255)
     merchant_description = models.TextField()
     merchant_logo = models.URLField()
-    # Outros detalhes do comerciante
 
 class Product(models.Model):
     product_id = models.AutoField(primary_key=True)
@@ -21,14 +19,12 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     stock_quantity = models.IntegerField()
     merchant = models.ForeignKey(Merchant, on_delete=models.CASCADE)
-    # Outros campos relacionados ao produto
 
 class Order(models.Model):
     order_id = models.AutoField(primary_key=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     order_date = models.DateTimeField()
     total_price = models.DecimalField(max_digits=10, decimal_places=2)
-    # Outros detalhes do pedido
 
 class OrderItem(models.Model):
     item_id = models.AutoField(primary_key=True)
