@@ -9,3 +9,6 @@ def home(request):
 
 def carrinho(request):
     return render(request, "todos/carrinho.html")
+
+def login(request):
+    return render(request, "todos/login.html")
