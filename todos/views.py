@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login
 
 # Create your views here.
 
@@ -10,5 +11,6 @@ def home(request):
 def carrinho(request):
     return render(request, "todos/carrinho.html")
 
-def login(request):
-    return render(request, "todos/login.html")
+def registrar(request):
+    
+    return render(request, "todos/registrar.html")
